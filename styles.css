@@ -1,0 +1,116 @@
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 20px;
+  background: white;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 700px;
+}
+
+thead {
+  background-image: linear-gradient(to bottom, #a8d8f0, #7ec8e3);
+}
+
+th {
+  padding: 12px 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #222;
+}
+
+td {
+  padding: 10px 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ===== Row backgrounds (exact attribute selectors) ===== */
+tr[class="read"] {
+  background-image: linear-gradient(to bottom, #c8f7c5, #a8e6a1);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(to bottom, #ffe8b3, #ffd699);
+}
+
+/* ===== All spans ===== */
+span {
+  display: inline-block;
+}
+
+/* ===== Status + Rate containers ===== */
+span[class="status"],
+span[class^="rate"] {
+  height: 1.7em;
+  width: 6.5em;
+  padding: 0.25em 0.4em;
+}
+
+/* ===== Status pills ===== */
+span[class="status"] {
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-align: center;
+  line-height: 1.2;
+}
+
+tr[class="to-read"] span[class="status"] {
+  border: 2px solid #c0392b;
+  background-image: linear-gradient(to bottom, #e74c3c, #c0392b);
+}
+
+tr[class="read"] span[class="status"] {
+  border: 2px solid #27ae60;
+  background-image: linear-gradient(to bottom, #2ecc71, #27ae60);
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 2px solid #d68910;
+  background-image: linear-gradient(to bottom, #f39c12, #d68910);
+}
+
+/* ===== Rating dots ===== */
+span[class^="rate"] > span {
+  border: 1.5px solid #b0b0b0;
+  border-radius: 50%;
+  margin: 0 2px;
+  height: 14px;
+  width: 14px;
+  background-color: #f5f5f5;
+  vertical-align: middle;
+}
+
+/* Filled stars (yellow) */
+span[class~="one"] :first-child {
+  background-image: linear-gradient(to bottom, #ffd700, #f1c40f);
+  border-color: #d4a017;
+}
+
+span[class~="two"] :nth-child(1),
+span[class~="two"] :nth-child(2) {
+  background-image: linear-gradient(to bottom, #ffd700, #f1c40f);
+  border-color: #d4a017;
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(to bottom, #ffd700, #f1c40f);
+  border-color: #d4a017;
+}
